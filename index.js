@@ -6,6 +6,7 @@ import authRouter from './routers/authRouter.js';
 const server = express();
 const port = process.env.PORT;
 server.set("view engine", "ejs");
+server.use(express.static('public'));
 
 server.get('/', (req, res) => {
     res.render("index");
