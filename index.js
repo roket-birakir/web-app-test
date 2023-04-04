@@ -7,6 +7,7 @@ const server = express();
 const port = process.env.PORT;
 server.set("view engine", "ejs");
 server.use(express.static('public'));
+server.use(express.urlencoded({extended: true}));
 
 server.get('/', (req, res) => {
     res.render("index");
