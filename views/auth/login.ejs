@@ -14,16 +14,17 @@
     <div class="inputs">
       <div class="input">
         <label for="email">E-posta:</label>
-        <input type="email" name="email" id="email" placeholder="example@example.com">
-        <span class="errorMessage"></span>
+        <input type="email" name="email" id="email" placeholder="example@email.com">
       </div>
       <div class="input">
          <label for="password">Şifre:</label>
         <input type="password" name="password" id="password" placeholder="••••••••">
-        <span class="errorMessage"></span>
       </div>
     </div>
     <button type="submit">Giriş</button>
+    <% if (typeof error != "undefined") { %>
+     <span class="errorMessage"> <%= error %> </span>
+    <% } %>
   </form>
 </body>
 </html>

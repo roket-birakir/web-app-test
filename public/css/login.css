@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 html, body {
   width: 100%;
@@ -47,7 +49,7 @@ form .inputs {
 form .inputs .input {
   position: relative;
   width: 100%;
-  height: 4.5rem;
+  height: 4rem;
   display: flex;
   flex-direction: column;
 }
@@ -58,15 +60,20 @@ form .inputs .input input {
   width: 100%;
   height: 2rem;
   border-radius: 0.4rem;
-  border: 1px solid black;
+  border: none;
   padding: 0 .5rem;
   margin: .25rem 0;
 }
-form .inputs .input .errorMessage {
+.errorMessage {
   font-size: .8rem;
   color: red;
-  display: none;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background-color: black;
+  border-radius: 0.5rem;
 }
-form .inputs .input .errorMessage::before {
+.errorMessage::before {
   content: "*";
+  color: red;
 }
