@@ -7,7 +7,6 @@ import authRouter from './routers/authRouter.js';
 const server = express();
 const port = process.env.PORT;
 server.set("view engine", "ejs");
-<<<<<<< HEAD
 server.use(
     session({
         secret: process.env.SESSION_KEY,
@@ -20,10 +19,6 @@ server.use((req, res, next) => {
     next();
 })
 
-=======
-server.use(express.static('public'));
-server.use(express.urlencoded({extended: true}));
->>>>>>> 2e265797ee005960410fab1fc01e6a4c8d160dc0
 
 server.get('/', (req, res) => {
     res.render("index");
